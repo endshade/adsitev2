@@ -64,7 +64,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-[#111727] text-white scroll-smooth">
       <SiteHeader />
 
-      {/* Hero */}
+
       <section id="hero" className="container mx-auto px-4 py-20 text-center">
         <Badge className="mb-6 bg-gradient-to-r from-pink-500 to-red-500 text-white border-0">
           🎯 Hyper-Local Advertising
@@ -93,7 +93,7 @@ export default function HomePage() {
         </div>
       </section>
 
-        {/* At-a-glance list */}
+
       <section id="glance" className="container mx-auto px-4 py-20">
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
           {["Trusted local audience", "Cost‑effective campaigns", "Access to specific high schools"].map((item) => (
@@ -152,7 +152,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ad Examples */}
+
       <section id="examples" className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold text-center mb-4">Ad Examples</h2>
         <p className="text-slate-200/90 text-center max-w-3xl mx-auto mb-8">
@@ -160,7 +160,6 @@ export default function HomePage() {
         </p>
 
         <div className="grid gap-6 md:grid-cols-2 items-start">
-          {/* Left: static mobile example */}
           <div>
             <div className="text-sm text-slate-300 mb-3">Mobile exmaples</div>
             <div className="bg-white/5 border border-white/10 rounded-lg overflow-hidden">
@@ -176,7 +175,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: carousel with desktop examples */}
           <div>
             <div className="text-sm text-slate-300 mb-3">Desktop examples</div>
             <ExamplesCarousel

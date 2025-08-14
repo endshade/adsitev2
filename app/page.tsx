@@ -81,7 +81,7 @@ export default function HomePage() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <a href="#why">
+          <a href="#glance">
             <Button
               size="lg"
               className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white px-8 py-3 text-lg"
@@ -91,8 +91,10 @@ export default function HomePage() {
             </Button>
           </a>
         </div>
+      </section>
 
         {/* At-a-glance list */}
+      <section id="glance" className="container mx-auto px-4 py-20">
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
           {["Trusted local audience", "Cost‑effective campaigns", "Access to specific high schools"].map((item) => (
             <div key={item} className="flex items-center justify-center gap-2 text-slate-200">
@@ -103,10 +105,7 @@ export default function HomePage() {
         </div>
 
         {/* Hero CTA */}
-        <ContactDialog triggerLabel="Contact Now" />
-        <p className="text-slate-300 mt-3" id="contact">
-          Interested? Click to start an email and get the ball rolling.
-        </p>
+        <ContactDialog triggerLabel="Get Started" />
       </section>
 
       {/* Features */}
@@ -198,17 +197,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why */}
-      <section id="why" className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-6">Why Grademelon?</h2>
-        <p className="text-slate-200/90 max-w-3xl mx-auto text-center mb-10">
-          We provide direct access to Montgomery County high school students through targeted, cost‑effective
-          advertising that delivers real results for local businesses.
-        </p>
-        <div className="text-center">
-          <ContactDialog triggerLabel="Talk to us" />
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-white/5 backdrop-blur-sm">

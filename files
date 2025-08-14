@@ -1,0 +1,126 @@
+// app/page.tsx
+import React from 'react';
+import { CheckCircle } from 'heroicons-react';
+import FeatureCard from './components/FeatureCard';
+import Testimonial from './components/Testimonial';
+import ContactDialog from './components/ContactDialog';
+import ExamplesCarousel from './components/ExamplesCarousel';
+
+const Page = () => {
+  const features = [
+    { title: 'Hyper-Local Advertising', description: 'Reach your audience locally.' },
+    { title: 'Data-Driven Insights', description: 'Make informed decisions with data.' },
+    { title: 'User-Centric Design', description: 'Focus on your users for better engagement.' },
+  ];
+
+  const testimonials = [
+    { name: 'John Doe', text: 'Great service!' },
+    { name: 'Jane Smith', text: 'Excellent product!' },
+  ];
+
+  const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#0b1220] via-[#0e1623] to-[#101827] text-white scroll-smooth">
+      <header className="bg-gradient-to-r from-[#ff6b81] to-[#ff385b] bg-clip-text text-transparent block">
+        <h1>Welcome to Grademelon</h1>
+      </header>
+      <main>
+        <section className="features">
+          {features.map((f, index) => (
+            <FeatureCard key={index}>
+              <div className="icon w-12 h-12 bg-gradient-to-r from-[#ff4d6d] to-[#ff1e4d] rounded-lg flex items-center justify-center">
+                {index === 0 && <CheckCircle className="h-5 w-5 text-[#ff4d6d]" />}
+                {index === 1 && <CheckCircle className="h-5 w-5 text-[#ff4d6d]" />}
+                {index === 2 && <CheckCircle className="h-5 w-5 text-[#ff4d6d]" />}
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-white">{f.title}</h3>
+              <p>{f.description}</p>
+            </FeatureCard>
+          ))}
+        </section>
+        <section className="testimonials">
+          {testimonials.map((t, index) => (
+            <Testimonial key={index} active={index === currentTestimonial}>
+              <div className="dot" onClick={() => setCurrentTestimonial(index)}>
+                {index === currentTestimonial ? "bg-[#ff4d6d]" : "bg-white/30"}
+              </div>
+              <div className="content">
+                <h2>{t.name}</h2>
+                <p>{t.text}</p>
+              </div>
+            </Testimonial>
+          ))}
+        </section>
+        <ContactDialog triggerClassName="mb-6 bg-gradient-to-r from-[#ff4d6d] to-[#ff1e4d] hover:from-[#ff5d7b] hover:to-[#ff2a58] text-white px-8 py-3 text-lg" />
+        <ExamplesCarousel />
+      </main>
+    </div>
+  );
+};
+
+export default Page;
+
+// components/contact-dialog.tsx
+import React from 'react';
+
+const ContactDialog = ({ triggerClassName }) => {
+  return (
+    <div>
+      <button className={`bg-gradient-to-r from-[#ff4d6d] to-[#ff1e4d] hover:from-[#ff5d7b] hover:to-[#ff2a58] text-white ${triggerClassName}`}>
+        Contact Us
+      </button>
+      {/* Dialog content here */}
+    </div>
+  );
+};
+
+export default ContactDialog;
+
+// components/examples-carousel.tsx
+import React from 'react';
+
+const ExamplesCarousel = () => {
+  const [index, setIndex] = React.useState(0);
+
+  return (
+    <div>
+      <div className="carousel">
+        {/* Carousel items here */}
+      </div>
+      <div className="dots">
+        {[0, 1, 2].map((i) => (
+          <div key={i} className={i === index ? "bg-[#ff4d6d]" : "bg-white/30 hover:bg-white/60"} onClick={() => setIndex(i)} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ExamplesCarousel;
+
+// app/login/page.tsx
+import React from 'react';
+
+const Login = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#0b1220] via-[#0e1623] to-[#101827] text-white">
+      {/* Login form here */}
+    </div>
+  );
+};
+
+export default Login;
+
+// app/dashboard/page.tsx
+import React from 'react';
+
+const Dashboard = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#0b1220] via-[#0e1623] to-[#101827] text-white">
+      {/* Dashboard content here */}
+    </div>
+  );
+};
+
+export default Dashboard;

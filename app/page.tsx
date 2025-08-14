@@ -94,7 +94,7 @@ export default function HomePage() {
 
         {/* At-a-glance list */}
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-          {["Trusted local audience", "Cost‑effective campaigns", "Fast setup"].map((item) => (
+          {["Trusted local audience", "Cost‑effective campaigns", "Access to specific high schools"].map((item) => (
             <div key={item} className="flex items-center justify-center gap-2 text-slate-200">
               <CheckCircle className="h-5 w-5 text-pink-400" />
               <span>{item}</span>
@@ -157,14 +157,13 @@ export default function HomePage() {
       <section id="examples" className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold text-center mb-4">Ad Examples</h2>
         <p className="text-slate-200/90 text-center max-w-3xl mx-auto mb-8">
-          See how ads appear across mobile and desktop experiences. These placements are designed to be effective yet
-          tasteful.
+          See how ads appear across mobile and desktop experiences.
         </p>
 
         <div className="grid gap-6 md:grid-cols-2 items-start">
           {/* Left: static mobile example */}
           <div>
-            <div className="text-sm text-slate-300 mb-3">Mobile in‑feed placement</div>
+            <div className="text-sm text-slate-300 mb-3">Mobile exmaples</div>
             <div className="bg-white/5 border border-white/10 rounded-lg overflow-hidden">
               <div className="w-full h-[360px] sm:h-[420px] md:h-[480px] bg-black/40 flex items-center justify-center">
                 <img
@@ -180,7 +179,7 @@ export default function HomePage() {
 
           {/* Right: carousel with desktop examples */}
           <div>
-            <div className="text-sm text-slate-300 mb-3">Desktop placements</div>
+            <div className="text-sm text-slate-300 mb-3">Desktop examples</div>
             <ExamplesCarousel
               slides={[
                 {

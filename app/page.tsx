@@ -21,18 +21,18 @@ const testimonials = [
 const features = [
   {
     icon: Target,
-    title: "Precise Targeting",
-    description: "Reach MoCo high schoolers directly with laser-focused advertising.",
+    title: "Targeting",
+    description: "There's nobody offering targetting this good for this price. By targetting by school, grade, or even subject, you can advertise efficienctly, making sure your ads are served only to the most relevant potential customers.",
   },
   {
     icon: TrendingUp,
-    title: "Better ROI",
-    description: "More cost-effective than Google Ads with higher engagement.",
+    title: "ROI",
+    description: "Grademelon is commited to offering a price better than any equivalent. Prices start at $2 per thousand impressions or $0.5 per click, but we're happy to work with you to fit your needs.",
   },
   {
     icon: Users,
-    title: "Local Focus",
-    description: "Connect with your local community of students and families.",
+    title: "Reach",
+    description: "Grademelon reaches 20,000 high schoolers across Montgomery County—your ads go straight to the student market. Users are much more likely to respond to advertising when its from a business and service locally specific to them. Grademelon checks those boxes.",
   },
 ]
 

@@ -22,7 +22,7 @@ const features = [
   {
     icon: Target,
     title: "Targeting",
-    description: "There's nobody offering targetting this good for this price. By targetting by school, grade, or even subject, you can advertise efficienctly, making sure your ads are served only to the most relevant potential customers.",
+    description: "There is nobody offering targetting this good for this price. By targetting by school, grade, or even subject, you can advertise efficienctly, making sure your ads are served only to the most relevant potential customers.",
   },
   {
     icon: TrendingUp,
